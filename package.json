@@ -6,10 +6,10 @@
   "license": "unlicensed",
   "private": true,
   "scripts": {
-    "dev": "marp --server ./content --allow-local-files --html --engine ./engine.js"
+    "dev": "reveal-md content/demo.md --watch --disable-auto-open"
   },
   "devDependencies": {
-    "@marp-team/marp-cli": "1.7.2",
-    "markdown-it-plantuml": "1.4.1"
+    "reveal-md": "5.3.2",
+    "reveal-md-scripts": "git+https://github.com/amra/reveal-md-scripts.git#3825cc0"
   }
 }

@@ -1,0 +1,6 @@
+{
+  "scripts": "node_modules/reveal-md-scripts/mermaidjs/test/lib/mermaid.min.js,node_modules/reveal-md-scripts/mermaidjs/test/lib/reveal-mermaid.js",
+  "css": "theme.css",
+  "theme": "black",
+  "highlightTheme": "night-owl"
+}

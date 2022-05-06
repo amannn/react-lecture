@@ -1,0 +1,111 @@
+:root {
+  --r-heading-text-transform: none;
+  --color-secondary: #71c1d8;
+  --color-white: #fff;
+  --color-text-inverted: rgba(0, 0, 0, 0.9);
+  --color-gray-010: rgba(255, 255, 255, 0.1);
+  --color-gray-040: rgba(255, 255, 255, 0.4);
+  --color-graph-line: var(--color-gray-040);
+  --border-radius: 2px;
+  --r-code-font: Monaco, monospace;
+  --r-main-font: Ubuntu, 'Source Sans Pro', Helvetica, sans-serif;
+  --r-heading-font: var(--r-main-font);
+  --r-main-font-size: 30px;
+}
+
+/**
+ * Slide layout
+ */
+
+.slides section {
+  text-align: left;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.layout-vertical-list {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+}
+
+/**
+ * General typography
+ */
+
+.reveal ul {
+  list-style-type: none;
+  margin-left: 0;
+}
+
+.reveal strong {
+  color: var(--color-secondary);
+  font-weight: inherit;
+}
+
+.reveal code {
+  background: var(--color-gray-010);
+  padding: 0px 5px;
+  border-radius: var(--border-radius);
+}
+
+/**
+ * Graphs
+ */
+
+.mermaid svg {
+  width: 90%;
+  height: 90%;
+}
+
+.mermaid .label foreignObject {
+  height: 20px;
+}
+
+.mermaid .edgePath .path {
+  stroke: var(--color-graph-line) !important;
+}
+
+.mermaid .arrowheadPath {
+  fill: var(--color-white) !important;
+}
+
+.mermaid .label foreignObject > div {
+  transform: scale(0.9);
+}
+
+.mermaid .label-container {
+  fill: var(--color-secondary) !important;
+  stroke: none !important;
+  rx: var(--border-radius);
+  ry: var(--border-radius);
+}
+
+.mermaid .label {
+  color: var(--color-text-inverted) !important;
+  /* Center */
+  transform: translateY(-2px);
+  font-family: var(--r-main-font) !important;
+}
+
+/**
+ * Code blocks
+ */
+
+.reveal pre {
+  width: 100%;
+  box-shadow: none;
+  font-size: 0.8em;
+}
+
+.reveal pre code {
+  background: transparent;
+}
+
+.hljs {
+  background: transparent;
+}
+
+.code-wrapper * {
+  font-style: normal;
+}
