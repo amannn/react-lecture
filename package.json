@@ -1,0 +1,15 @@
+{
+  "name": "react-lecture",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Jan Amann <jan@amann.me>",
+  "license": "unlicensed",
+  "private": true,
+  "scripts": {
+    "dev": "marp --server ./content --allow-local-files --html --engine ./engine.js"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "1.7.2",
+    "markdown-it-plantuml": "1.4.1"
+  }
+}
