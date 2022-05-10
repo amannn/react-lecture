@@ -114,3 +114,13 @@ Theming
   <div>Column one</div>
   <div>Column two</div>
 </div>
+
+---
+
+<section data-preload data-background-iframe="https://codesandbox.io/s/pedantic-allen-b6hbyi" data-background-interactive>
+
+Note: https://codesandbox.io/s/pedantic-allen-b6hbyi
+
+---
+
+After interactive content

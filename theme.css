@@ -36,6 +36,12 @@
   gap: 40px;
 }
 
+/* Add an area around iframes that can be clicked so the outer
+   window can be focused to get control of the slides again. */
+.slide-background-content iframe {
+  padding: 10px;
+}
+
 /**
  * General typography
  */
