@@ -1,5 +1,5 @@
 ---
-title: Introduction to React - by Jan Amann
+title: Demo
 ---
 
 # Presentation title

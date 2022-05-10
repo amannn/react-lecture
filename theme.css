@@ -3,8 +3,9 @@
   --color-secondary: #71c1d8;
   --color-white: #fff;
   --color-text-inverted: rgba(0, 0, 0, 0.9);
-  --color-gray-010: rgba(255, 255, 255, 0.1);
   --color-gray-040: rgba(255, 255, 255, 0.4);
+  --color-gray-010: rgba(255, 255, 255, 0.1);
+  --color-gray-005: rgba(255, 255, 255, 0.05);
   --color-graph-line: var(--color-gray-040);
   --border-radius: 2px;
   --r-code-font: Monaco, monospace;
@@ -17,10 +18,16 @@
  * Slide layout
  */
 
-.slides section {
+.slides {
+  border: 1px solid var(--color-gray-005);
+}
+
+.slides > section {
   text-align: left;
   padding: 40px;
   box-sizing: border-box;
+  max-height: 100%;
+  overflow: hidden;
 }
 
 .layout-vertical-list {
