@@ -12,6 +12,7 @@
   --r-main-font: Ubuntu, 'Source Sans Pro', Helvetica, sans-serif;
   --r-heading-font: var(--r-main-font);
   --r-main-font-size: 30px;
+  --r-link-color: var(--color-secondary);
 }
 
 /**
@@ -62,13 +63,18 @@
   border-radius: var(--border-radius);
 }
 
+.reveal blockquote {
+  margin: var(--r-block-margin) 0;
+  width: auto;
+  padding: 0 10px;
+}
+
 /**
  * Graphs
  */
 
 .mermaid svg {
   width: 90%;
-  height: 90%;
 }
 
 .mermaid .label foreignObject {
@@ -94,10 +100,18 @@
   ry: var(--border-radius);
 }
 
+.mermaid .edgeLabel {
+  background-color: transparent !important;
+  color: var(--color-white);
+}
+
+.mermaid .edgeLabel rect {
+  background-color: transparent !important;
+  fill: transparent !important;
+}
+
 .mermaid .label {
   color: var(--color-text-inverted) !important;
-  /* Center */
-  transform: translateY(-2px);
   font-family: var(--r-main-font) !important;
 }
 
@@ -108,7 +122,18 @@
 .reveal pre {
   width: 100%;
   box-shadow: none;
+}
+
+.reveal pre {
   font-size: 0.8em;
+}
+
+.reveal .code-huge pre {
+  font-size: 1.5em;
+}
+
+.reveal .code-small pre {
+  font-size: 0.5em;
 }
 
 .reveal pre code {
@@ -121,4 +146,18 @@
 
 .code-wrapper * {
   font-style: normal;
+}
+
+/**
+ * Images
+ */
+
+.img-credits {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  font-size: 12px;
+  opacity: 0.5;
 }

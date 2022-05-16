@@ -6,7 +6,7 @@
   "license": "unlicensed",
   "private": true,
   "scripts": {
-    "dev": "reveal-md content --watch --disable-auto-open"
+    "start": "reveal-md content --watch --disable-auto-open"
   },
   "devDependencies": {
     "reveal-md": "5.3.2",
