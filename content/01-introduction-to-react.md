@@ -27,6 +27,15 @@ Note:
 
 - Who has seen code like this before?
 - If you're like me, this looks easy.
+
+---
+
+<div style="display: flex; align-items: center; justify-content: center; height: 600px">
+  <img src="images/unexpected-angle-bracket.png" />
+</div>
+
+Note:
+
 - Browser doesn't understand this syntax, needs compiler.
 - Compiler needs to be used through a bundler.
 - Or use a framework?
@@ -80,6 +89,8 @@ Note:
 [The State of JS 2021, Frontend frameworks usage](https://2021.stateofjs.com/en-US/libraries/front-end-frameworks)
 
 </div>
+
+Note: Amount of JavaScript developers who have used React at some point
 
 ---
 
@@ -147,6 +158,34 @@ _What_ instead of _how_.
 <!-- .element: class="fragment" -->
 html = view(state);
 <!-- .element: class="fragment" -->
+
+---
+
+```jsx
+document.body.innerHTML = <App state="A" />; // ?
+document.body.innerHTML = <App state="B" />; // ?
+```
+
+Note:
+
+This is what we do with purely server-side rendered apps.
+
+Problems:
+- Slow
+- Form state would be blown away
+
+---
+
+```jsx
+render(<App state="A" />);
+rerender(<App state="B" />);
+
+// Virtual DOM ⬇️
+
+const appNode = ...;
+appNode.textContent = 'B';
+
+```
 
 ---
 
@@ -413,63 +452,25 @@ Note:
 1. Since React uses JavaScript for rendering, we use it for loops as well
 2. Keys need to be unique among siblings
 
-
 ---
 
 ## Interactivity
 
 ---
 
-## Introducing `useState`
-
-```jsx
-function Counter() {
-  const [count, setCount] = useState(0);
-
-  function onIncrementClick() {
-    setCount(count + 1);
-  }
-
-  return (
-    <div>
-      <p>Count: {count}</p>
-      <button onClick={onIncrementClick}>Increment</button>
-    </div>
-  );
-}
-```
-
----
-
-<section data-preload data-background-iframe="https://codesandbox.io/s/react-lecture-counter-template-hjy4xg?hidenavigation=1" data-background-interactive>
+<section data-preload data-background-iframe="https://codesandbox.io/embed/react-lecture-counter-template-hjy4xg?hidenavigation=1&editorsize=80" data-background-interactive>
 
 Note: https://codesandbox.io/s/react-lecture-counter-template-hjy4xg
-
-https://codesandbox.io/embed/react-lecture-counter-template-hjy4xg?hidenavigation=1
-
-How to mirror?
-
----
-
-## Introducing `useState`
-
-```jsx
-root.render(
-  <>
-    <Counter />
-    <Counter />
-  </>
-);
-```
-
-Note:
-1. Props can be functions
 
 ---
 
 ## Rules for state
 
 1. State is isolated to components
-2. There should be a single source of truth
-3. Shared state is moved to a common parent
-4. Computed values are derived
+2. Computed values are derived
+3. Use a single source of truth
+4. Shared state is moved to nearest common parent
+
+---
+
+## Questions?

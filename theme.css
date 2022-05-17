@@ -20,7 +20,7 @@
  */
 
 .slides {
-  border: 1px solid var(--color-gray-005);
+  /* border: 1px solid var(--color-gray-005); */
 }
 
 .slides > section {
