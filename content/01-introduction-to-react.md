@@ -12,8 +12,7 @@ by Jan Amann
 
 Note:
 
-- About me: Freelancer, occasional open source contributor, specialised on React
-- This is part of the introduction to React. The actual lecture will be longer, so this is only part of it
+Thanks for attending this lecture today. My name is Jan and I'm a local freelancer from the area. I've known Daniel for a couple of years already and earlier this year he approached me to ask if I could help him out with some lectures about the React web applications subject in the coming winter semester. So today I'm here to give you a preview of a lecture that would be part of that subject. The actual lecture will be a bit longer, so today we're covering the first few basics. A few words myself: I have a background both in software engineering as well as design. Eventually I got self employed to work as a contractor who works with clients which are building React apps with an emhasis on user experience. And when I find some time between projects I also enjoy to work on open source projects and explore ideas.
 
 ---
 
