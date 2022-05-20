@@ -150,10 +150,15 @@
 }
 
 /**
- * Images
+ * Assets: images & videos
  */
 
-.img-credits {
+.asset {
+  text-align: center;
+  height: 600px;
+}
+
+.asset-credits {
   position: absolute;
   bottom: 0;
   left: 0;

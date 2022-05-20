@@ -79,17 +79,27 @@ Note:
 
 ---
 
+<div class="asset">
+  <video controls autoplay loop muted playsinline src="https://cdn.dribbble.com/users/6252196/screenshots/15526059/media/c6b97ab963260981c654b85928bd7a25.mp4"></video>
+</div>
+
+<div class="asset-credits">
+https://dribbble.com/shots/15526059-AR-Hotel-Finder-Exploration
+</div>
+
+---
+
 ## Why should you learn **React**?
 
 ---
 
 ## Developers like React
 
-<div style="text-align:center; height:600px">
+<div class="asset">
   <img src="images/state-of-js-frameworks-usage-2021.png" />
 </div>
 
-<div class="img-credits">
+<div class="asset-credits">
 
 [The State of JS 2021, Frontend frameworks usage](https://2021.stateofjs.com/en-US/libraries/front-end-frameworks)
 
@@ -257,19 +267,19 @@ Note:
 
 ---
 
-<div style="text-align:center; height:600px">
+<div class="asset">
   <img src="images/separation-of-concerns-1.png" />
 </div>
 
-<p class="img-credits">https://youtu.be/x7cQ3mrcKaY</p>
+<p class="asset-credits">https://youtu.be/x7cQ3mrcKaY</p>
 
 ---
 
-<div style="text-align:center; height:600px">
+<div class="asset">
   <img src="images/separation-of-concerns-2.png" />
 </div>
 
-<p class="img-credits">https://youtu.be/x7cQ3mrcKaY</p>
+<p class="asset-credits">https://youtu.be/x7cQ3mrcKaY</p>
 
 ---
 
