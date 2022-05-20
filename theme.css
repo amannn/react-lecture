@@ -75,6 +75,7 @@
 
 .mermaid svg {
   width: 90%;
+  min-height: 320px;
 }
 
 .mermaid .label foreignObject {

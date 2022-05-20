@@ -12,7 +12,9 @@ by Jan Amann
 
 Note:
 
-Thanks for attending this lecture today. My name is Jan and I'm a local freelancer from the area. I've known Daniel for a couple of years already and earlier this year he approached me to ask if I could help him out with some lectures about the React web applications subject in the coming winter semester. So today I'm here to give you a preview of a lecture that would be part of that subject. The actual lecture will be a bit longer, so today we're covering the first few basics. A few words myself: I have a background both in software engineering as well as design. Eventually I got self employed to work as a contractor who works with clients which are building React apps with an emhasis on user experience. And when I find some time between projects I also enjoy to work on open source projects and explore ideas.
+- Thanks for attending this lecture today. My name is Jan and I'm a local freelancer from the area. I've known Daniel for a couple of years already and earlier this year he approached me to ask if I could help him out with some lectures about the React web applications subject in the coming winter semester. So today I'm here to give you a preview of a lecture that would be part of that subject. The actual lecture will be a bit longer, so today we're covering the first few basics. A few words myself: I have a background both in software engineering as well as design. Eventually I got self employed to work as a contractor who works with clients which are building React apps with an emhasis on user experience. And when I find some time between projects I also enjoy to work on open source projects and explore ideas.
+- This lecture will introduce React from the conceptual perspective, will help you understand how to render user interfaces and also how to add basic interactivity
+- If there are questions you're free to ask at any point
 
 ---
 
@@ -38,17 +40,6 @@ Note:
 - Browser doesn't understand this syntax, needs compiler.
 - Compiler needs to be used through a bundler.
 - Or use a framework?
-
----
-
-<div style="text-align:center; height:600px">
-  <img src="images/stacked-rafts-web-dev.png" />
-</div>
-
-<p class="img-credits">https://twitter.com/jaredpalmer/status/1142800704580591617</p>
-
-Note:
-- Not every website needs to be built with React. We were building web apps since decades.
 - Not just technology-wise, but also architecture-wise.
 
 ---
@@ -73,6 +64,21 @@ Note:
 
 ---
 
+## What is **React**?
+
+- A JavaScript library for building user interfaces
+<!-- .element: class="fragment" -->
+- Based on a syntax extension called JSX to describe markup
+<!-- .element: class="fragment" -->
+- Provides components as the main building block for apps
+<!-- .element: class="fragment" -->
+
+Note:
+- **Interactive** user interfaces
+- Heavily based on JavaScript and tries to avoid additional syntax for things like control flow
+
+---
+
 ## Why should you learn **React**?
 
 ---
@@ -83,7 +89,7 @@ Note:
   <img src="images/state-of-js-frameworks-usage-2021.png" />
 </div>
 
-<div class="img-credits"><a href="https://2021.stateofjs.com/en-US/libraries/front-end-frameworks">
+<div class="img-credits">
 
 [The State of JS 2021, Frontend frameworks usage](https://2021.stateofjs.com/en-US/libraries/front-end-frameworks)
 
@@ -177,7 +183,7 @@ Problems:
 
 ```jsx
 render(<App state="A" />);
-rerender(<App state="B" />);
+render(<App state="B" />);
 
 // Virtual DOM ⬇️
 
@@ -199,8 +205,12 @@ graph TD;
 ```
 
 1. App is broken down into isolated pieces
+2.
+3. 
 
-Note: Child components make none to very few assumptions about parents
+Note:
+- Child components make none to very few assumptions about parents
+- Complex problems are broken down into smaller ones which can be developed in an isolated way
 
 ---
 
@@ -216,6 +226,7 @@ graph TD;
 
 1. App is broken down into isolated pieces
 2. Data flows top-down
+3.
 
 Note:
 - Children declare a clear interface.
@@ -292,6 +303,8 @@ const root = createRoot(node);
 // Lowercase tags are built-in browser primitives
 root.render(<p>Hello world</p>);
 ```
+<!-- .element: data-line-numbers="3,8-10" -->
+
 
 Note: JSX is a syntax extension and needs a build tool.
 
@@ -357,22 +370,33 @@ function Person({children, firstName, imageUrl, imageSize = 30}) {
   return (
     <div>
       <h1>{firstName.toUpperCase()}</h1>
+```
+```jsx
       <img
         src={imageUrl}
         alt={'Photo of ' + firstName}
         style={{width: imageSize, height: imageSize}}
       />
+```
+<!-- .element: class="fragment" -->
+```jsx
       <p>{children}</p>
+```
+<!-- .element: class="fragment" -->
+```jsx
     </div>
   );
 }
+```
 
+```jsx
 root.render(
   <Person firstName="Grace" imageUrl="/grace-hopper.jpg">
     was a pioneer of computer programming.
   </Person>
 );
 ```
+<!-- .element: class="fragment" -->
 
 </div>
 
@@ -393,24 +417,30 @@ Note:
 function Person({firstName, lastName, isComputerScientist}) {
   let firstNameContent;
   if (firstName != null) {
+    // … just a function call that returns a data structure
     firstNameContent = <p>{firstName.upperCase()}</p>;
   }
 
   return (
     <div>
       <h1>{firstNameContent}</h1>
+```
+```jsx
       <p>{lastName != null && lastName.toUpperCase()}</p>
-      <p>{isComputerScientist
-        ? '… is a computer scientist'
-        : '… had another profession'
-      }</p>
+```
+<!-- .element: class="fragment" -->
+
+```jsx
+      <p>
+        {isComputerScientist ? '… is a computer scientist' : '… had another profession'}
+      </p>
+```
+<!-- .element: class="fragment" -->
+
+```jsx
     </div>
   );
 }
-
-root.render(
-  <Person firstName="Grace" lastName="Hopper" isComputerScientist />
-);
 ```
 
 </div>
