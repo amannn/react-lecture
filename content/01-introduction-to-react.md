@@ -76,7 +76,6 @@ Note:
 Note:
 - **Interactive** user interfaces
 - Heavily based on JavaScript and tries to avoid additional syntax for things like control flow
-- Why use a framework?
 
 ---
 
@@ -463,7 +462,7 @@ Note:
 
 ---
 
-## Lists
+## Lists & loops
 
 <div class="code-small">
 
