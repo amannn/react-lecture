@@ -91,7 +91,7 @@ https://dribbble.com/shots/15526059-AR-Hotel-Finder-Exploration
 
 ---
 
-## Why should you learn **React**?
+## Who is using **React**?
 
 ---
 
@@ -219,6 +219,10 @@ appNode.textContent = 'B';
 </div>
 
 <p class="asset-credits">https://youtu.be/x7cQ3mrcKaY</p>
+
+Note:
+
+- React puts emphasis on colocation
 
 ---
 
