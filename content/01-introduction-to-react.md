@@ -12,7 +12,11 @@ by Jan Amann
 
 Note:
 
-- Thanks for attending this lecture today. My name is Jan and I'm a local freelancer from the area. I've known Daniel for a couple of years already and earlier this year he approached me to ask if I could help him out with some lectures about the React web applications subject in the coming winter semester. So today I'm here to give you a preview of a lecture that would be part of that subject. The actual lecture will be a bit longer, so today we're covering the first few basics. A few words myself: I have a background both in software engineering as well as design. Eventually I got self employed to work as a contractor who works with clients which are building React apps with an emhasis on user experience. And when I find some time between projects I also enjoy to work on open source projects and explore ideas.
+- Thanks for attending this lecture today.
+- This is a preview of a lecture that is going to take place in the next winter semester. The actual lecture will be a bit longer, so today we're covering the first few basics
+- My name is Jan and I'm a local freelancer from the area. I have a background both in software engineering as well as design.
+- Working as a freelancer with some local startups and also international companies. React apps with an emhasis on user experience.
+- And when I find some time between projects I also enjoy to work on open source projects and explore ideas.
 - This lecture will introduce React from the conceptual perspective, will help you understand how to render user interfaces and also how to add basic interactivity
 - If there are questions you're free to ask at any point
 
@@ -37,9 +41,7 @@ Note:
 
 Note:
 
-- Browser doesn't understand this syntax, needs compiler.
-- Compiler needs to be used through a bundler.
-- Or use a framework?
+- There's more to it. Browser doesn't understand this syntax, needs compiler.
 - Not just technology-wise, but also architecture-wise.
 
 ---
@@ -204,6 +206,36 @@ appNode.textContent = 'B';
 
 ---
 
+<div class="asset">
+  <img src="images/separation-of-concerns-1.png" />
+</div>
+
+<p class="asset-credits">https://youtu.be/x7cQ3mrcKaY</p>
+
+---
+
+<div class="asset">
+  <img src="images/separation-of-concerns-2.png" />
+</div>
+
+<p class="asset-credits">https://youtu.be/x7cQ3mrcKaY</p>
+
+---
+
+## React decouples the rendering target
+
+1. Render in the browser
+2. Render on the server
+3. Render native apps (iOS, Android)
+4. Render desktop applications
+5. … many more
+
+> Learn once, write anywhere. – React Native
+
+<!-- .element: class="fragment" -->
+
+---
+
 ## Architecture of React apps
 
 ```mermaid
@@ -264,36 +296,6 @@ graph TD;
 Note:
 - Parents can handle events
 - Parents can intercept events (no two-way databinding)
-
----
-
-<div class="asset">
-  <img src="images/separation-of-concerns-1.png" />
-</div>
-
-<p class="asset-credits">https://youtu.be/x7cQ3mrcKaY</p>
-
----
-
-<div class="asset">
-  <img src="images/separation-of-concerns-2.png" />
-</div>
-
-<p class="asset-credits">https://youtu.be/x7cQ3mrcKaY</p>
-
----
-
-## React decouples the rendering target
-
-1. Render in the browser
-2. Render on the server
-3. Render native apps (iOS, Android)
-4. Render desktop applications
-5. … many more
-
-> Learn once, write anywhere. – React Native
-
-<!-- .element: class="fragment" -->
 
 ---
 
