@@ -12,6 +12,7 @@
   --r-main-font: Ubuntu, 'Source Sans Pro', Helvetica, sans-serif;
   --r-heading-font: var(--r-main-font);
   --r-main-font-size: 30px;
+  --r-link-color: var(--color-secondary);
 }
 
 /**
@@ -19,7 +20,7 @@
  */
 
 .slides {
-  border: 1px solid var(--color-gray-005);
+  /* border: 1px solid var(--color-gray-005); */
 }
 
 .slides > section {
@@ -34,6 +35,12 @@
   display: flex;
   justify-content: space-around;
   gap: 40px;
+}
+
+/* Add an area around iframes that can be clicked so the outer
+   window can be focused to get control of the slides again. */
+.slide-background-content iframe {
+  padding: 10px;
 }
 
 /**
@@ -56,13 +63,19 @@
   border-radius: var(--border-radius);
 }
 
+.reveal blockquote {
+  margin: var(--r-block-margin) 0;
+  width: auto;
+  padding: 0 10px;
+}
+
 /**
  * Graphs
  */
 
 .mermaid svg {
   width: 90%;
-  height: 90%;
+  min-height: 320px;
 }
 
 .mermaid .label foreignObject {
@@ -88,10 +101,18 @@
   ry: var(--border-radius);
 }
 
+.mermaid .edgeLabel {
+  background-color: transparent !important;
+  color: var(--color-white);
+}
+
+.mermaid .edgeLabel rect {
+  background-color: transparent !important;
+  fill: transparent !important;
+}
+
 .mermaid .label {
   color: var(--color-text-inverted) !important;
-  /* Center */
-  transform: translateY(-2px);
   font-family: var(--r-main-font) !important;
 }
 
@@ -102,7 +123,18 @@
 .reveal pre {
   width: 100%;
   box-shadow: none;
+}
+
+.reveal pre {
   font-size: 0.8em;
+}
+
+.reveal .code-huge pre {
+  font-size: 1.5em;
+}
+
+.reveal .code-small pre {
+  font-size: 0.5em;
 }
 
 .reveal pre code {
@@ -115,4 +147,23 @@
 
 .code-wrapper * {
   font-style: normal;
+}
+
+/**
+ * Assets: images & videos
+ */
+
+.asset {
+  text-align: center;
+  height: 600px;
+}
+
+.asset-credits {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  font-size: 12px;
+  opacity: 0.5;
 }
